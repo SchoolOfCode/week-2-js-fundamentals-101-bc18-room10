@@ -47,4 +47,4 @@ const toggleTemperatureDisplay = (degrees)=> {   //degrees = 20
 //     } else if (unit !=("c" || "f")) {
 //         return "Error: Unit should be c or f"; 
 //     }
-// }
+// }h
