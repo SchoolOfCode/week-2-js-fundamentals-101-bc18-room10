@@ -22,17 +22,18 @@ const displayTemperatureInFahrenheit = (cel)=> {
 
 // Create a function toggleTemperatureDisplay DONE
 
-let lastValue = "c";
+let previousUnit = "celsius";               //Initial Value will be Celsius
 
-const toggleTemperatureDisplay = (degrees)=> {   //degrees = 20
-
-   if (lastValue === "c") {
-    lastValue = "f";
-    return displayTemperatureInFahrenheit(degrees);
-   } else if (lastValue ==="f") {
-    lastValue = "c";
-    return displayTemperatureInCelsius(degrees);
-   }
+const toggleTemperatureDisplay = (degrees)=> {   
+    let result;
+        if (previousUnit === "celsius") {
+            previousUnit = "fahrenheit";
+            result =  displayTemperatureInFahrenheit(degrees);
+        } else if (previousUnit ==="fahrenheit") {
+            previousUnit = "celsius";
+            result = displayTemperatureInCelsius(degrees);
+        }
+   return result;
 }
 
 // that returns either Celsius or Fahrenheit 
